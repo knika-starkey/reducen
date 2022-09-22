@@ -11,8 +11,10 @@ if (isNaN(n)) {
     if (m1 > n1) m1 -= n1;
     else n1 -= m1;
   }
-  //   if (~~(m / n) > 0 && m % n > 0) alert(`${~~(m / n)} ${m % n}/${n / n1}`);
-  //   else if (m % n == 0 || n == 1) alert(m / m1);
-  //   else alert(m / m1 + "/" + n / n1);
-  alert(m / m1 + "/" + n / n1);
+  m /= m1;
+  n /= n1;
+  if (m % n == 0 || n == 1) alert(m);
+  else if (~~(m / n) > 0 && m % n > 0) alert(`${~~(m / n)} ${m % n}/${n}`);
+  else alert(m + "/" + n);
+  alert(m + "/" + n);
 }
